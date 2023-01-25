@@ -1,6 +1,7 @@
 package com.eolo.dspesquisa.entities;
 
 import com.eolo.dspesquisa.entities.enums.Platform;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
