@@ -12,7 +12,6 @@ public class DspesquisaApplication {
     public static void main(String[] args) {
         SpringApplication.run(DspesquisaApplication.class, args);
     }
-
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
@@ -26,4 +25,5 @@ public class DspesquisaApplication {
             }
         };
     }
+
 }
