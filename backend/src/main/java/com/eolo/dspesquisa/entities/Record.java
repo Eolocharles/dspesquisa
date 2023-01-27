@@ -78,8 +78,8 @@ public class Record implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Record recor)) return false;
-        return id.equals(recor.id) && Objects.equals(name, recor.name) && Objects.equals(age, recor.age) && Objects.equals(moment, recor.moment) && Objects.equals(game, recor.game);
+        if (!(o instanceof Record record)) return false;
+        return id.equals(record.id) && Objects.equals(name, record.name) && Objects.equals(age, record.age) && Objects.equals(moment, record.moment) && Objects.equals(game, record.game);
     }
 
     @Override

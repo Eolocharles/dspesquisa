@@ -6,6 +6,8 @@ import com.eolo.dspesquisa.entities.Game;
 import com.eolo.dspesquisa.entities.Record;
 import com.eolo.dspesquisa.repositories.GameRepository;
 import com.eolo.dspesquisa.repositories.RecordRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,5 +38,10 @@ public class RecordService {
         entity = repository.save(entity);
         return new RecordDTO(entity);
 
+    }
+
+    @Transactional(readOnly = true)
+    public Page<RecordDTO> findByMoments(Instant minDate, Instant maxDate, Pageable pageable) {
+        return repository.findByMoments(minDate, maxDate, pageable).map(RecordDTO::new);
     }
 }
