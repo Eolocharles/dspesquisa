@@ -9,6 +9,7 @@ import {
 import * as SplashScreen from 'expo-splash-screen';
 import Header from './src/components/Header';
 import Home from './src/pages/Home';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 export default function App() {
   const [fontsLoaded] = useFonts ({
     Play_400Regular,
@@ -37,11 +38,11 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container} onLayout={onLayoutRootView}>
+    <GestureHandlerRootView style={styles.container} onLayout={onLayoutRootView}>
       <Header />
       <Home />
       <StatusBar style="auto" />
-    </View>
+    </GestureHandlerRootView>
   );
 }
 

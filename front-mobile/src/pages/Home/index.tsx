@@ -3,9 +3,9 @@ import {FontAwesome5 as Icon} from '@expo/vector-icons'
 import { Text, StyleSheet, View, Image, Alert } from "react-native";
 import {RectButton} from 'react-native-gesture-handler';
 const Home = () => {
-    const handleOnPress = () =>{
-        Alert.alert('Você clicou no botão!')
-    }
+  const handleOnPress = () => {
+    Alert.alert("Você clicou no botão!");
+  };
     return (
         <>
             <View style={styles.container}>
