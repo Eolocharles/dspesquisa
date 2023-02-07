@@ -7,8 +7,7 @@ import {
   Play_700Bold,
 } from '@expo-google-fonts/play';
 import * as SplashScreen from 'expo-splash-screen';
-import Header from './src/components/Header';
-import Home from './src/pages/Home';
+import Routes from './src/routes';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 export default function App() {
   const [fontsLoaded] = useFonts ({
@@ -39,8 +38,7 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={styles.container} onLayout={onLayoutRootView}>
-      <Header />
-      <Home />
+      <Routes />
       <StatusBar style="auto" />
     </GestureHandlerRootView>
   );
@@ -49,6 +47,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0B1F34',
+    
   },
 });
